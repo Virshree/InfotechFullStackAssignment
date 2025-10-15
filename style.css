@@ -10,29 +10,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 
   font-family: "Roboto", sans-serif;
 }
 main {
-    width: 100%; 
-    max-width: 1440px;
- 
+  width: 100%;
+  max-width: 1440px;
 }
 
 .nav-container {
-
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 0 80px; */
 }
 
 .logo {
   width: 158px;
   height: 58px;
-  
 }
 
 .nav-items {
@@ -66,6 +61,7 @@ main {
   height: 46px;
   border-radius: 5px;
   border: none;
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -257,140 +253,152 @@ main {
   width: 100px;
   height: auto;
 }
-.close-btn{
+.close-btn {
   display: none;
 }
-.menu{
-    display: none;
-}
-.nav-icon{
+.menu {
   display: none;
 }
-.mobilelogo{display: none;}
-
+.nav-icon {
+  display: none;
+}
+.mobilelogo {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.651); /* semi-transparent black */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+  left: 0;
+  
+}
 /* Tablet and Mobile Responsiveness */
 @media (max-width: 375px) {
-  .nav-items{
+  .nav-items {
     display: none;
   }
 
-  .contact-btn{
+  .contact-btn {
     display: none;
   }
-  .mobilelogo{
-    top:20px;
-    left:20px;
+  .mobilelogo {
+    top: 20px;
+    left: 20px;
     position: absolute;
     width: 120px;
-    
+
     display: block;
   }
-    /* Mobile Navbar Container */
-    .mobile-menunav {
-        width: 100%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-      }
- 
-    
-      /* Menu icon (hamburger) */
-      .menu {
-        display: block;
-        width: 28px;
-        height: 28px;
-        cursor: pointer;
-      }
-  .hero-part1{
+  /* Mobile Navbar Container */
+  .mobile-menunav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  /* Menu icon (hamburger) */
+  .menu {
+    display: block;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+  .hero-part1 {
     width: 343px;
     text-align: center;
-
-
   }
   .nav-items {
     position: fixed;
     top: 0;
     right: 0;
-    width: 220px;
+    width: 327px;
     height: 100%;
     z-index: 50;
     background-color: #fafbff;
     flex-direction: column;
-    align-items: center;
- 
-  
-    justify-content: center;
+    align-items: flex-start;
   }
-  ul>li{
-    margin: 10px;
-    
-    gap:10px;
-    display: flex;
-   padding: 0;
-    text-align: center;
+  ul > li {
+    /* margin: 10px; */
+    top:120px;
+    position: relative;
+   gap:20px;
+   left:0;
+    padding: 0 10px;
+   display: flex;
   }
-  ul>li:hover{
+  ul > li:hover {
     color: #4356d6;
   }
 
-  .nav-icon{
+  .nav-icon {
     display: block;
   }
-  .contact-btn{
+  .contact-btn {
+    display: flex;
+
+    gap: 10px;
+    
+    top:520px;
+    right: 100px;
+    z-index: 50;
+    left: 160px;
     position: fixed;
     display: none;
- 
-    width: 160px;
-    top:650px;
-    right:34px;
-  
-      z-index: 50;
+   
+    background-color: #4356d6;
+    color: white;
+    width: 269px;
+    height: 46px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
-    flex-direction: column;
-    align-items: center;
-
+    font-weight: 500;
+    cursor: pointer;
   }
-  .button-container{
+  .button-container {
     display: flex;
-    /* align-items: center; */
+
     justify-content: center;
-    margin: 0px;
-    padding: 0px;
+
     flex-direction: column;
   }
-  .title{
+  .title {
     font-size: 34px;
     width: 343px;
     height: 144px;
-  
   }
-  .description{
+  .description {
     width: 343px;
     height: 160px;
   }
-.underline{
+  .underline {
     position: absolute;
     right: 10px;
-    top:70px;
-}
-.bannerImage{
+    top: 70px;
+  }
+  .bannerImage {
     width: 350px;
     height: 296px;
-
-}
-.getStarted-btn,.consultation-btn{
+  }
+  .getStarted-btn,
+  .consultation-btn {
     width: 343px;
-  
+
     height: 46px;
-}
-  .hero-section{
+  }
+  .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
   }
   /* Analysts Section */
   .analysts-section {
@@ -398,7 +406,7 @@ main {
     flex-direction: column;
     align-items: center; /* center all inner elements */
     justify-content: center;
-  
+
     padding: 20px 0;
     gap: 20px;
   }
@@ -443,23 +451,24 @@ main {
     width: 20px;
     height: 20px;
   }
- 
+  .features > p {
+    width: 270px;
+  }
 
- /* Close button inside sidebar */
+  /* Close button inside sidebar */
 
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-  color: #3245b3;
-  background: none;
-  cursor: pointer;
-  display: none; /* hidden initially */
-}
-
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    color: #3245b3;
+    background: none;
+    cursor: pointer;
+    display: none; /* hidden initially */
+  }
 
   /* Services Section */
   .services-section {
@@ -467,17 +476,16 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     margin-top: 60px;
     gap: 20px;
     padding: 0 10px;
   }
-  .icon{
+  .icon {
     width: 36px;
     height: 36px;
     display: flex;
     flex-direction: column;
-    
   }
   .service-card {
     display: flex;
@@ -490,32 +498,30 @@ main {
     border-radius: 10px;
     padding: 20px;
     width: 100%;
-    max-width: 343px;
+
+    max-width: 353px;
     border: 1px solid #e2e7ff;
   }
 
- .service-card .text{
-    display: flex;
-    flex-direction: column;
-  }
   .service-card .text h3 {
     width: 242px;
-   
-    height: 61px;
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
 
+    height: 31px;
+    margin-top: 5px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .icon {
+    position: absolute;
+    right: 320px;
+    left: 10px;
+  }
   .service-card .text p {
     font-size: 18px;
+
     width: 242px;
     height: 91px;
-    
+
     line-height: 1.5;
   }
-  }
-  
- 
-
-
-  
+}
